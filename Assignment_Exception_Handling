@@ -1,0 +1,32 @@
+//Handle exceptions in the number Problem statement: 
+//Get the input String from the user and parse it to an integer, if it is not a number it will throw NumberFormatException, Catch this exception and print "Entered input is not a valid format for an integer." or else print the square of that number. (Refer to Sample Input and Output). 
+
+//Sample input and output 
+//1: Enter an integer: 12 
+//The square value is 144 
+//The work has been done successfully 
+
+//Sample input and output 2: 
+//Enter an integer: Java 
+//Entered input is not a valid format for an integer. 
+//The work has been done successfully 
+
+
+package com.exception;
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter an integer: ");
+    try {
+      int num = Integer.parseInt(sc.nextLine());
+      System.out.println("The square value is " + (num * num));
+      System.out.println("The work has been done successfully");
+    } catch (NumberFormatException e) {
+      System.out.println("Entered input is not a valid format for an integer.");
+      System.out.println("The work has been done successfully");
+    }sc.close();
+  }
+}
